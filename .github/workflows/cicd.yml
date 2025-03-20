@@ -1,13 +1,3 @@
-name: CI/CD Pipeline
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
 jobs:
   run_sum:
     runs-on: ubuntu-latest
@@ -16,21 +6,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./  # Make sure this is correct (./ means repo root)
+      - name: Install Dependencies
+        run: npm install  # Installs required dependencies like @actions/core
+        working-directory: ./  # Root directory (already correct)
 
       - name: Run Sum Action
         id: sum_step
-        uses: ./  # Use ./ because this is your local action
+        uses: sudarshan1212/sum-action@v1.0.0
         with:
           num1: 5
-          num2: 10
+          num2: 5
 
       - name: Output Sum
         run: echo "The sum is ${{ steps.sum_step.outputs.sum }}"
