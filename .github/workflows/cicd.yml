@@ -23,12 +23,13 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./  # Ensure it's in the correct location
 
       - name: Run Sum Action
         id: sum_step
-        uses: sudarshan1212/sum-action@v1.0.0  # Use the external action
+        uses: sudarshan1212/sum-action@v1.0.0
         with:
-          num1: 20
+          num1: 10
           num2: 10
 
       - name: Output Sum
