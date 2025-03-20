@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Sum Action
         id: sum_step
-        uses: sudarshan1212/sum-action@v1.0.0
+        uses:  sudarshan1212/sum-action@main
         with:
           num1: 10
           num2: 10
