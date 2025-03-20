@@ -18,7 +18,7 @@ jobs:
 
       - name: Run Sum Action
         id: sum_step  # ID to reference outputs
-        uses: sudarshan/sum-action@v1.0.0  # Make sure this repo exists and has a v1.0.0 tag
+        uses: sudarshan1212/sum-action@v1.0.0  # Make sure this repo exists and has a v1.0.0 tag
         with:
           num1: 5
           num2: 3
