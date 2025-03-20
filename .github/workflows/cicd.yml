@@ -9,6 +9,7 @@ on:
       - main
 
 jobs:
+
   run_sum:
     runs-on: ubuntu-latest
 
