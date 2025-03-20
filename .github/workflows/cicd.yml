@@ -24,7 +24,6 @@ jobs:
 
       - name: Install dependencies for sum-action
         run: npm install
-        working-directory: ./sum-action  # Adjust this if sum-action is in a different folder
 
       - name: Run Sum Action
         id: sum_step  # ID to reference outputs
