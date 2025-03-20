@@ -22,7 +22,7 @@ jobs:
         uses: sudarshan1212/sum-action@v1.0.0  # Make sure this repo exists and has a v1.0.0 tag
         with:
           num1: 5
-          num2: 5
+          num2: 10
 
       - name: Output Sum
         run: echo "The sum is ${{ steps.sum_step.outputs.sum }}"
