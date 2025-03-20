@@ -9,7 +9,6 @@ on:
       - main
 
 jobs:
-
   run_sum:
     runs-on: ubuntu-latest
 
@@ -22,15 +21,15 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies for sum-action
+      - name: Install dependencies
         run: npm install
-        working-directory: ./  # Adjust this if sum-action is in a different folder
+        working-directory: ./  # Make sure this is correct (./ means repo root)
 
       - name: Run Sum Action
-        id: sum_step  # ID to reference outputs
-        uses: sudarshan1212/sum-action@v1.0.0  # Ensure this repo exists and has a v1.0.0 tag
+        id: sum_step
+        uses: ./  # Use ./ because this is your local action
         with:
-          num1: 10
+          num1: 5
           num2: 10
 
       - name: Output Sum
