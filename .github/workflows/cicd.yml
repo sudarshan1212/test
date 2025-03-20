@@ -28,7 +28,7 @@ jobs:
         id: sum_step
         uses: sudarshan1212/sum-action@v1.0.0  # Use the external action
         with:
-          num1: 10
+          num1: 20
           num2: 10
 
       - name: Output Sum
