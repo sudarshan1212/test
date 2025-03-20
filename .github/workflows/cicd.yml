@@ -30,7 +30,7 @@ jobs:
         id: sum_step  # ID to reference outputs
         uses: sudarshan1212/sum-action@v1.0.0  # Ensure this repo exists and has a v1.0.0 tag
         with:
-          num1: 5
+          num1: 10
           num2: 10
 
       - name: Output Sum
